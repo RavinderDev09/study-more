@@ -1,0 +1,24 @@
+<section class="trusted-by">
+  <div class="container">
+    <p class="section-subtitle">Trusted by students at</p>
+    <div class="institutions">
+      <div class="institution" *ngFor="let institution of institutions">
+        <img [src]="institution.logo" [alt]="institution.name + ' logo'" class="institution-logo">
+        <span class="institution-name">{{ institution.name }}</span>
+      </div>
+    </div>
+    <div class="testimonials-carousel">
+      <div class="testimonial">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">StudyMode helped me organize my study schedule and improve my grades significantly.</p>
+        <div class="student-info">
+          <img src="assets/student-1.jpg" alt="Student" class="student-avatar">
+          <div>
+            <p class="student-name">Rahul Sharma</p>
+            <p class="student-college">IIT Bombay</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -26,14 +26,17 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/styles.scss"
-            ],
+             "src/styles.scss"
+            ],"stylePreprocessorOptions": {
+            "includePaths": ["src"]
+          },
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -46,13 +49,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "20kB",
+                  "maximumError": "30kB"
                 }
               ],
               "outputHashing": "all"
@@ -89,12 +92,25 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+           "assets": [
+  "src/favicon.ico",
+  "src/assets",
+  {
+    "glob": "**/*",
+    "input": "node_modules/react-icons/fi",
+    "output": "/assets/icons/fi"
+  },
+  {
+    "glob": "**/*",
+    "input": "node_modules/react-icons/fa",
+    "output": "/assets/icons/fa"
+  },
+  {
+    "glob": "**/*",
+    "input": "node_modules/react-icons/io",
+    "output": "/assets/icons/io"
+  }
+],
             "styles": [
               "src/styles.scss"
             ],
@@ -103,5 +119,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

@@ -1,0 +1,36 @@
+<header class="landing-header" [class.scrolled]="scrolled" [class.menu-open]="isMenuOpen">
+  <div class="logo-container" (click)="scrollTo('home')">
+    <div class="logo-icon">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L3 7L12 12L21 7L12 2Z" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"/>
+        <path d="M3 12L12 17L21 12" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"/>
+        <path d="M3 17L12 22L21 17" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h1>StudyMode</h1>
+  </div>
+
+  <div class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav>
+    <a (click)="scrollTo('home')" class="nav-link">
+      <i class="icon home"></i> 
+      <span>Home</span>
+    </a>
+    <a (click)="scrollTo('features')" class="nav-link">
+      <i class="icon check-circle"></i> 
+      <span>Features</span>
+    </a>
+    <a (click)="scrollTo('contact')" class="nav-link">
+      <i class="icon mail"></i> 
+      <span>Contact</span>
+    </a>
+  </nav>
+</header>

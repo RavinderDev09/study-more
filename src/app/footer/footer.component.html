@@ -1,0 +1,89 @@
+<footer class="footer" [class.dark-mode]="darkMode">
+  <div class="footer-container">
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-icon">📚</span>
+          <span class="logo-text">StudyMode</span>
+        </div>
+        <p class="footer-tagline">Smart Learning for Brighter Futures</p>
+        
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="social-link">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" aria-label="GitHub" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links Columns -->
+      <div class="footer-links">
+        <div class="link-group">
+          <h4 class="group-title">Product</h4>
+          <ul>
+            <li><a routerLink="/features">Features</a></li>
+            <li><a routerLink="/pricing">Pricing</a></li>
+            <li><a routerLink="/integrations">Integrations</a></li>
+            <li><a routerLink="/updates">Updates</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4 class="group-title">Company</h4>
+          <ul>
+            <li><a routerLink="/about">About Us</a></li>
+            <li><a routerLink="/careers">Careers</a></li>
+            <li><a routerLink="/blog">Blog</a></li>
+            <li><a routerLink="/press">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4 class="group-title">Resources</h4>
+          <ul>
+            <li><a routerLink="/help">Help Center</a></li>
+            <li><a routerLink="/tutorials">Tutorials</a></li>
+            <li><a routerLink="/webinars">Webinars</a></li>
+            <li><a routerLink="/community">Community</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4 class="group-title">Legal</h4>
+          <ul>
+            <li><a routerLink="/privacy">Privacy</a></li>
+            <li><a routerLink="/terms">Terms</a></li>
+            <li><a routerLink="/cookies">Cookies</a></li>
+            <li><a routerLink="/licenses">Licenses</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; {{ currentYear }} StudyMode. All rights reserved.
+      </div>
+      <div class="language-selector">
+        <select (change)="changeLanguage($event)">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" (click)="scrollToTop()" [class.visible]="showBackToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</footer>
