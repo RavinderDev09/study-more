@@ -1,5 +1,5 @@
-<header class="landing-header" [class.scrolled]="scrolled" [class.menu-open]="isMenuOpen">
-  <div class="logo-container" (click)="scrollTo('home')">
+<header class="landing-header" [class.scrolled]="scrolled" [class.menu-open]="isMenuOpen" [class.hidden]="isHidden">
+  <div class="logo-container" (click)="scrollTo('home'); createRipple($event)">
     <div class="logo-icon">
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2L3 7L12 12L21 7L12 2Z" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
