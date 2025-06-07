@@ -9,7 +9,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 @Component({
   selector: 'app-hero',
   imports:[CommonModule,RouterModule ],
-    standalone: true,
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss'],
  animations: [

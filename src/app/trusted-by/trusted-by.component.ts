@@ -6,7 +6,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-trusted-by',
-  standalone: true,
   imports: [CommonModule,RouterModule],
   templateUrl: './trusted-by.component.html',
   styleUrls: ['./trusted-by.component.scss']
